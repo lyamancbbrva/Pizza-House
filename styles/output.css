@@ -662,10 +662,6 @@ video {
   margin-top: 2.25rem;
 }
 
-.mt-\[40px\] {
-  margin-top: 40px;
-}
-
 .mt-\[9vh\] {
   margin-top: 9vh;
 }
@@ -1637,6 +1633,10 @@ html{
   font-size: 1.4em;
 }
 
+.slider-text{
+  margin-top: 40px;
+}
+
 .slider-img img{
   position: absolute;
   top: 70%;
@@ -2117,6 +2117,10 @@ html{
 
   .lg\:mr-\[17\%\] {
     margin-right: 17%;
+  }
+
+  .lg\:mt-\[40px\] {
+    margin-top: 40px;
   }
 
   .lg\:block {
