@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/output.css">
+    <link rel="stylesheet" href="styles/input.css">
+    <title>Document</title>
+</head>
+
+<body class="overflow-x-hidden">
+    <header class="lg:bg-[#f5f5f5]" data-aos="fade">
+        <nav>
+            <div id="mobile-nav" class="flex justify-between p-[10px] items-center lg:hidden">
+                <div class="flex items-center gap-3">
+                    <input type="checkbox" id="checkbox4" class="checkbox4 visuallyHidden">
+                        <label for="checkbox4">
+                            <div class="hamburger hamburger4" onclick="openMenu()">
+                                <span class="bar bar1"></span>
+                                <span class="bar bar2"></span>
+                                <span class="bar bar3"></span>
+                                <span class="bar bar4"></span>
+                                <span class="bar bar5"></span>
+                            </div>
+                        </label>
+
+                    <a href="#" id="logo" class="w-[140px]"><img src="assets/img/logo.png" alt="logo" /> </a>
+                </div>
+                <i class="fa-solid fa-ellipsis-vertical text-2xl px-3"></i>
+            </div>
+            <div id="hidden-nav" class="w-[80vw] bg-white h-[100vh] px-[30px]">
+                <div class="py-[20px]">
+                    <span class="m-[10px]">
+                        <i class="fa-solid fa-phone px-3"></i>+1 718-999-3939
+                    </span>
+                    <span class="m-[10px]">
+                        <i class="fa-solid fa-location-dot px-3"></i>
+                        514 S. Magnolia St. Orlando, FL 32806
+                    </span>
+                    <div class="icons flex gap-[10px] py-[20px]">
+                        <div class="icon bg-[#EBEBEB] w-[29px] h-[29px] text-center">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                        <div class="icon bg-[#EBEBEB] w-[29px] h-[29px] text-center">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <div class="icon bg-[#EBEBEB] w-[29px] h-[29px] text-center">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </div>
+                        <div class="icon bg-[#EBEBEB] w-[29px] h-[29px] text-center">
+                            <i class="fa-brands fa-google-plus-g"></i>
+                        </div>
+                    </div>
+                </div>
+                <ul class="py-[10px] text-center">
+                    <li class="bg-[#6046B6] text-white"><a href="">Home</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Topography</a></li>
+                    <li><a href="">Contacts</a></li>
+                </ul>
+            </div>
+            <div id="desktop-nav" class="hidden lg:flex justify-between">
+                <div id="logo-sec" class="w-[30vw] bg-white mb-[20px] p-[5px] h-[17vh]">
+                    <a href="#"><img src="assets/img/logo.png" alt="logo"
+                            class="object-cover absolute right-[30px] top-[30px]"></a>
+                </div>
+                <div>
+                    <div id="footer-nav" class="bg-white w-[60vw] flex gap-5 px-3 py-4 justify-center">
+                        <span>
+                            <i class="fa-solid fa-phone px-3"></i>+1 718-999-3939
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-location-dot px-3"></i>
+                            514 S. Magnolia St. Orlando, FL 32806
+                        </span>
+                        <div class="icons flex gap-[10px]">
+                            <div class="icon bg-[#EBEBEB] w-[29px] h-[29px] text-center">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div class="icon bg-[#EBEBEB] w-[29px] h-[29px] text-center">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <div class="icon bg-[#EBEBEB] w-[29px] h-[29px] text-center">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </div>
+                            <div class="icon bg-[#EBEBEB] w-[29px] h-[29px] text-center">
+                                <i class="fa-brands fa-google-plus-g"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-10 justify-center mt-9">
+                        <ul class="flex gap-10" id="nav-list">
+                            <li><a href="#" class="text-[1.1em] font-semibold" id="home">Home</a></li>
+                            <li><a href="#" class="text-[1.1em] font-semibold">About us</a></li>
+                            <li><a href="#" class="text-[1.1em] font-semibold">Typography</a></li>
+                            <li><a href="#" class="text-[1.1em] font-semibold">Contacts</a></li>
+                        </ul>
+                        <i class="fa-solid fa-bars text-[1.5rem]" onclick="openGalery()"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="hidden-galery" class="w-[35vw] h-[100vh] bg-white">
+                <div>
+                  <div class="flex px-[20px] gap-[40px] items-center py-[50px]">
+                    <i class="fa-solid fa-xmark text-[2em]" onclick="openGalery()"></i>
+                    <h3 class="text-[1.8em] text-center">Gallery</h3>
+                  </div>
+                    <div class="flex flex-wrap">
+                        <div class="hide-galery-item overflow-hidden m-[10px] relative">
+                            <img class="w-[16vw] h-[20vh] object-cover" src="assets/img/project-1-195x164.jpg" alt="project 1" />
+                            <div class="none-div opacity-0 flex  justify-center items-center absolute bg-[#5c42de70] w-[16vw] h-[20vh] top-0 left-0">
+                                <i class="fa-solid fa-magnifying-glass text-white text-[2em]"></i>
+                            </div>
+                        </div>
+                        <div class="hide-galery-item overflow-hidden m-[10px] relative">
+                            <img class="w-[16vw] h-[20vh] object-cover" src="assets/img/project-2-195x164.jpg" alt="project 2" />
+                            <div class="none-div opacity-0 flex  justify-center items-center absolute bg-[#5c42de70] w-[16vw] h-[20vh] top-0 left-0">
+                                <i class="fa-solid fa-magnifying-glass text-white text-[2em]"></i>
+                            </div>
+                        </div>
+                        <div class="hide-galery-item overflow-hidden m-[10px] relative">
+                            <img class="w-[16vw] h-[20vh] object-cover" src="assets/img/project-3-1200x800-original.jpg" alt="project 3" />
+                            <div class="none-div opacity-0 flex  justify-center items-center absolute bg-[#5c42de70] w-[16vw] h-[20vh] top-0 left-0">
+                                <i class="fa-solid fa-magnifying-glass text-white text-[2em]"></i>
+                            </div>
+                        </div>
+                        <div class="hide-galery-item overflow-hidden m-[10px] relative">
+                            <img class="w-[16vw] h-[20vh] object-cover" src="assets/img/project-4-1200x800-original.jpg" alt="project 4" />
+                            <div class="none-div opacity-0 flex  justify-center items-center absolute bg-[#5c42de70] w-[16vw] h-[20vh] top-0 left-0">
+                                <i class="fa-solid fa-magnifying-glass text-white text-[2em]"></i>
+                            </div>
+                        </div>
+                        <div class="hide-galery-item overflow-hidden m-[10px] relative">
+                            <img class="w-[16vw] h-[20vh] object-cover" src="assets/img/project-5-1200x800-original.jpg" alt="project 5" />
+                            <div class="none-div opacity-0 flex  justify-center items-center absolute bg-[#5c42de70] w-[16vw] h-[20vh] top-0 left-0">
+                                <i class="fa-solid fa-magnifying-glass text-white text-[2em]"></i>
+                            </div>
+                        </div>
+                        <div class="hide-galery-item overflow-hidden m-[10px] relative">
+                            <img class="w-[16vw] h-[20vh] object-cover" src="assets/img/project-6-1200x800-original.jpg" alt="project 6" />
+                            <div class="none-div opacity-0 flex  justify-center items-center absolute bg-[#5c42de70] w-[16vw] h-[20vh] top-0 left-0">
+                                <i class="fa-solid fa-magnifying-glass text-white text-[2em]"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="slider1 swiper mySwiper h-[100%] w-[100%]" data-aos="fade" data-aos-duration="2000" data-aos-delay="100">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide text-center justify-center items-center  md:items-start md:px-[15px] md:text-left" id="slide1">
+                    <div class="pl-[10%]">
+                        <h2 class="text-white  uppercase text-[3rem] mt-6 leading-[1.1] font-serif md:px-[15px] md:text-[6rem]">Perfect
+                            <br /> pizza
+                        </h2>
+                        <p class="text-white w-[75%] mx-auto text-[1.2em] py-5  md:mx-0 md:px-[15px] md:w-[20%] md:mb-[10px]">Experience the taste of a perfect pizza at PizzaHouse, one of the best restaurants!</p>
+                        <button class="bg-[#FFE745] font-bold hover:bg-[#73CCA1] hover:text-white uppercase p-5 mt-[40px] md:px-[15px] md:p-8">view our menu</button>
+                    </div>
+                </div>
+                <div class="swiper-slide text-center justify-center items-center  md:items-start md:px-[15px] md:text-left"
+                    id="slide2">
+                    <h2
+                        class="text-white  uppercase text-[3rem] mt-6 leading-[1.1] font-serif md:px-[15px] md:text-[6rem]">
+                        Quality
+                        <br /> ingredients
+                    </h2>
+                    <p class="text-white  w-[75%] mx-auto text-[1.2em] py-5 md:mx-0 md:px-[15px] md:w-[20%]"> We use
+                        only the best
+                        ingredients to make one-of-a-kind pizzas for our customers.</p>
+                    <button
+                        class="hover:bg-[#73CCA1] hover:text-black bg-[#FFE745] font-bold uppercase p-5 mt-6 md:px-[15px] md:p-8">view
+                        our menu</button>
+                </div>
+            </div>
+            <div class="swiper-pagination lg:hidden"></div>
+            <div class="swiper-button-prev hidden lg:inline-block">
+                <div class="preview">
+                    <div class="preview__img" style="background-image: url(&quot;images/slide-2-1920x753.jpg&quot;);">
+                    </div>
+                </div>
+                <div class="swiper-button-arrow">
+                    <i class="fa-solid fa-arrow-left text-white"></i>
+                </div>
+            </div>
+            <div class="swiper-button-next hidden lg:inline-block">
+                <div class="swiper-button-arrow">
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                </div>
+                <div class="preview">
+                    <div class="preview__img" style="background-image: url(&quot;images/slide-1-1920x753.jpg&quot;);">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="menusec" class="mb-10">
+            <div class="wrapper">
+                <h3 class="text-center uppercase text-[1.3em] font-serif py-4 font-medium md:text-[2em]  md:tracking-[.3em] lg:text-[3rem] lg:py-10" data-aos="fade-up"  data-aos-duration="1000" data-aos-delay="100"> our menu</h3>
+                <div class="menu-cards md:flex flex-wrap justify-center">
+                    <div class="menu-card1 menu-card h-[33vh] m-5 lg:w-[30%] overflow-hidden lg:m-3 md:w-[40%]" data-aos="grow-top">
+                        <div class="bg-[#14070798] w-[100%] h-[100%] relative z-0">
+                            <div
+                                class="w-[75px] h-[75px] bg-[#ffffff5b] rounded-[50%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                                <span
+                                    class="w-[63px] h-[63px] bg-[#3f2c7c] rounded-[50%] z-[888888880] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border-4 border-[transparent]">
+                                    <i class="fa-solid fa-leaf text-white text-center text-[2em] p-2"></i>
+                                </span>
+                                <p class="mt-[9vh] font-medium text-white text-[1.2em]">Salads</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-card2 menu-card h-[33vh] m-5 lg:w-[30%] overflow-hidden lg:m-3 md:w-[40%]" data-aos="grow-bottom">
+                        <div class="overflow-hidden bg-[#14070798] w-[100%] h-[100%] relative z-0">
+                            <div
+                                class=" w-[75px] h-[75px] bg-[#ffffff5b] rounded-[50%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                                <span
+                                    class="w-[63px] h-[63px] bg-[#3f2c7c] rounded-[50%] z-[888888880] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border-4 border-[transparent]">
+                                    <i class="fa-solid fa-pizza-slice text-white text-center text-[2em] p-3"></i>
+                                </span>
+                                <p class="mt-[9vh] font-medium text-white text-[1.2em]">Pizzas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-card3 menu-card h-[33vh] m-5 lg:w-[30%] overflow-hidden lg:m-3 md:w-[40%]" data-aos="grow-top">
+                        <div class="bg-[#14070798] w-[100%] h-[100%] relative z-0">
+                            <div
+                                class=" w-[75px] h-[75px] bg-[#ffffff5b] rounded-[50%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                                <span
+                                    class="w-[63px] h-[63px] bg-[#3f2c7c] rounded-[50%] z-[888888880] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border-4 border-[transparent]">
+                                    <i class="fa-solid fa-burger text-white text-center text-[2em] p-3"></i>
+                                </span>
+                                <p class="mt-[9vh] font-medium text-white text-[1.2em]">Burgers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-card4 menu-card h-[33vh] m-5 lg:w-[30%] overflow-hidden lg:m-3 md:w-[40%]" data-aos="grow-bottom">
+                        <div class="bg-[#14070798] w-[100%] h-[100%] relative z-0">
+                            <div
+                                class=" w-[75px] h-[75px] bg-[#ffffff5b] rounded-[50%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                                <span
+                                    class="w-[63px] h-[63px] bg-[#3f2c7c] rounded-[50%] z-[888888880] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border-4 border-[transparent]">
+                                    <i class="fa-solid fa-ice-cream text-white text-center text-[2em] p-3"></i>
+                                </span>
+                                <p class="mt-[9vh] font-medium text-white text-[1.2em]">Desserts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-card5 menu-card h-[33vh] m-5 lg:w-[30%] overflow-hidden lg:m-3 md:w-[40%]" data-aos="grow-top">
+                        <div class="bg-[#14070798] w-[100%] h-[100%] relative z-0">
+                            <div
+                                class=" w-[75px] h-[75px] bg-[#ffffff5b] rounded-[50%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                                <span
+                                    class="w-[63px] h-[63px] bg-[#3f2c7c] rounded-[50%] z-[888888880] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border-4 border-[transparent]">
+                                    <i
+                                        class="fa-solid fa-glass-water-droplet text-white text-center text-[2em] p-4"></i>
+                                </span>
+                                <p class="mt-[9vh] font-medium text-white text-[1.2em]">Drinks</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-card6 menu-card h-[33vh] m-5 lg:w-[30%] overflow-hidden lg:m-3 md:w-[40%]" data-aos="grow-bottom">
+                        <div class="bg-[#14070798] w-[100%] h-[100%] relative z-0">
+                            <div
+                                class=" w-[75px] h-[75px] bg-[#ffffff5b] rounded-[50%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                                <span
+                                    class="w-[63px] h-[63px] bg-[#3f2c7c] rounded-[50%] z-[888888880] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border-4 border-[transparent]">
+                                    <i class="fa-solid fa-shrimp text-white text-center text-[2em] p-3"></i>
+                                </span>
+                                <p class="mt-[9vh] font-medium text-white text-[1.2em]">Seafood</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-20">
+            <div class="bg-3 h-[50vh] lg:h-[70vh]">
+                <div class="texts text-white p-3 lg:flex flex-col items-end  lg:pr-[16%]">
+                    <h3 class="font-serif text-[1.9rem] mb-2 mt-6 lg:text-[3rem]" data-aos="fade-right">Best atmosphere</h3>
+                    <p class="text-[1.8rem] lg:w-[26%]" data-aos="fade-right">PizzaHouse is the place of the best pizza and high-quality
+                        service.</p>
+                    <div class="flex gap-2 items-center pt-5 lg:items-center lg:pr-[10%]">
+                        <div class="bg-[#ffe745] h-[3px] w-[50px]" data-aos="fade-right"></div>
+                        <p class="text-[#ffffff4d] text-[1em]" data-aos="fade-left">Ben Smith, Founder</p>
+                    </div>
+                    <button   class="hover:bg-[#FFE745] hover:text-black bg-[#73CCA1] text-white font-bold uppercase p-5 mt-9 lg:p-6 lg:mr-[10%]" data-aos="fade-up">view  our services</button>
+                </div>
+            </div>
+        </section>
+        <section id="pizza-sec">
+            <div class="wrapper">
+                <h3 class="text-center uppercase  text-[1.6em] py-8 font-serif font-thin lg:text-[3rem] md:text-[2em] lg:py-10 md:tracking-[.4em]" data-aos="fade-up"> Selected Pizzas</h3>
+                <div class="pizza-cards md:flex flex-wrap">
+                    <div class="pizza-card relative overflow-hidden text-center m-5 w-[80%] mx-auto lg:w-[22%] lg:m-4 py-4 md:w-[40%]" data-aos="fade-right">
+                        <div class="pizza-figure mx-auto w-[50%] pt-10">
+                            <img src="assets/img/product-1-161x162.png" alt="pizza product1">
+                        </div>
+                        <div class="stars py-3">
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#CCC] text-[.9em]"></i>
+                        </div>
+                        <p class="text-[1em] pb-2">margherita Pizza</p>
+                        <p class="text-[#6046b6]">$24.00</p>
+                        <div class="salam lg:opacity-0 w-[100%]">
+                            <button data-aos="fade-right" class="right hover:bg-[#FFE745] hover:text-black bg-[#FFE745] w-[90%] font-bold uppercase p-4 text-[.9em] mt-6 ">Add
+                                to card</button> <br />
+                            <button data-aos="fade-left" class="left hover:bg-[#FFE745] hover:text-black bg-[#FFE745] w-[90%] font-bold uppercase p-4 text-[.9em] mt-6 ">View
+                                product</button>
+                        </div>
+                    </div>
+                    <div class="pizza-card relative overflow-hidden text-center m-5 w-[80%] mx-auto lg:w-[22%] lg:m-4 py-4 md:w-[40%]" data-aos="fade-right">
+                        <div class="pizza-figure mx-auto w-[50%] pt-10">
+                            <img src="assets/img/product-2-161x162.png" alt="pizza product1">
+                        </div>
+                        <div class="stars py-3">
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                        </div>
+                        <p class="text-[1em] pb-2">Mashroom Pizza</p>
+                        <p class="text-[#6046b6]">$24.00</p>
+                        <div class="salam lg:opacity-0 w-[100%]">
+                            <button data-aos="fade-right" class="right hover:bg-[#FFE745] hover:text-black bg-[#FFE745] w-[90%] font-bold uppercase p-4 text-[.9em] mt-6">Add
+                                to card</button> <br />
+                            <button data-aos="fa-arrow-left" class="left hover:bg-[#FFE745] hover:text-black bg-[#FFE745] w-[90%] font-bold uppercase p-4 text-[.9em] mt-6">View
+                                product</button>
+                        </div>
+                    </div>
+                    <div class="pizza-card relative overflow-hidden text-center m-5 w-[80%] mx-auto lg:w-[22%] lg:m-4 py-4 md:w-[40%]" data-aos="fade-right">
+                        <div class="pizza-figure mx-auto w-[50%] pt-10">
+                            <img src="assets/img/product-3-161x162.png" alt="pizza product1">
+                        </div>
+                        <div class="stars py-3">
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#CCC] text-[.9em]"></i>
+                        </div>
+                        <p class="text-[1em] pb-2">Hawaiian Pizza</p>
+                        <p class="text-[#6046b6]">$24.00</p>
+                        <div class="salam lg:opacity-0 w-[100%]">
+                            <button data-aos="fade-right" class="right hover:bg-[#FFE745] hover:text-black bg-[#FFE745] w-[90%] font-bold uppercase p-4 text-[.9em] mt-6">Add
+                                to card</button> <br />
+                            <button data-aos="fade-left" class="left hover:bg-[#FFE745] hover:text-black bg-[#FFE745] w-[90%] font-bold uppercase p-4 text-[.9em] mt-6">View
+                                product</button>
+                        </div>
+                    </div>
+                    <div class="pizza-card relative overflow-hidden text-center m-5 w-[80%] mx-auto lg:w-[22%] lg:m-4 py-4 md:w-[40%]" data-aos="fade-right">
+                        <div class="pizza-figure mx-auto w-[50%] pt-10">
+                            <img src="assets/img/product-4-161x162.png" alt="pizza product1">
+                        </div>
+                        <div class="stars py-3">
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                            <i class="fa-solid fa-star text-[#FFE745] text-[.9em]"></i>
+                        </div>
+                        <p class="text-[1em] pb-2">Pesto Pizza</p>
+                        <span class="text-[#15151580] line-through">$40.00</span>
+                        <span class="text-[#6046b6]">$24.00</span>
+                        <div class="salam lg:opacity-0 w-[100%]">
+                            <button data-aos="fade-right" class="left hover:bg-[#FFE745] hover:text-black bg-[#FFE745] w-[90%] font-bold uppercase p-4 text-[.9em] mt-6">Add
+                                to card</button> <br />
+                            <button data-aos="fade-left" class="right hover:bg-[#FFE745] hover:text-black bg-[#FFE745] w-[90%] font-bold uppercase p-4 text-[.9em] mt-6">View
+                                product</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-20">
+            <div class="bg-4 h-[50vh] lg:h-[60vh]">
+                <div class="texts text-white p-3 lg:flex flex-col items-end  lg:pr-[16%]">
+                    <h3 class="font-serif text-[2.2rem] mb-2 mt-6 lg:text-[3.5rem]" data-aos="fade-left" data-aos-duration="1000">-30% on all salads <br /> & drinks
+                    </h3>
+                    <div class="flex gap-2 items-center pt-5 lg:items-center" data-aos="fade-left" data-aos-duration="1300">
+                        <div class="bg-[#6046B6] h-[3px] w-[50px] mr-1" data-aos="fade-right" data-aos-duration="1100"></div>
+                        <p class="text-[#ffffff] text-[1.2em]" data-aos="fade-left" data-aos-duration="1000">Taste some of the best PizzaHouse salads</p>
+                    </div>
+                    <button class="hover:bg-[#73CCA1] hover:text-white bg-[#FFE745] text-black font-bold uppercase p-5 mt-9  lg:p-6 lg:mr-[17%] lg:w-[12 vw]" data-aos-duration="2000" data-aos="fade-left">contact us</button>
+                </div>
+            </div>
+        </section>
+        <section class="slider2 pt-[30px]">
+           <div class="wrapper pt-[30px]">
+            <h3 class="font-serif text-[1.9rem] mb-5 mt-6 lg:text-[4rem] text-center lg:tracking-[.1em]" data-aos="fade-left" data-aos-duration="1000">What people say</h3>
+            <div class="swiper mySwiper h-[100vh]">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide w-[30%]  text-center">
+                    <div class="slider-text bg-white">
+                        <p class="text-[1.2em]">PizzaHouse has great pizza. Not only do you get served with a great attitude and delivered delicious pizza, you get a great price.</p>
+                        <div class="slider-img py-5">
+                            <img src="assets/img/user-9-115x115.jpg" class="rounded-[50%] lg:hidden" alt="user 9">
+                        </div>
+                    </div>
+                    <div class="h-[17vh] flex flex-col justify-end">
+                        <h6 class="text-[1.2em] ">Bill Johnson</h6>
+                    <span class="text-[#6046b6] text-[1em]">client</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide w-[30%]  text-center">
+                    <div class="slider-text bg-white">
+                        <p class="text-[1.2em]">PizzaHouse has great pizza. Not only do you get served with a great attitude and delivered delicious pizza, you get a great price.</p>
+                        <div class="slider-img py-5">
+                            <img src="assets/img/user-6-115x115.jpg" class="rounded-[50%] lg:hidden" alt="user 9">
+                        </div>
+                    </div>
+                    <div class="flex flex-col h-[17vh] justify-end">
+                        <h6 class="text-[1.2em]">Aaron wilson</h6>
+                    <span class="text-[#6046b6] text-[1em]">client</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide w-[30%]  text-center">
+                    <div class="slider-text bg-white ">
+                        <p class="text-[1.2em]">PizzaHouse has great pizza. Not only do you get served with a great attitude and delivered delicious pizza, you get a great price.</p>
+                        <div class="slider-img py-5">
+                            <img src="assets/img/user-6-115x115.jpg" class="rounded-[50%] lg:hidden" alt="user 9">
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-end h-[17vh]">
+                        <h6 class="text-[1.2em]">Ashley Fitsgeal</h6>
+                    <span class="text-[#6046b6] text-[1em]">client</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide w-[30%]  text-center">
+                    <div class="slider-text bg-white">
+                        <p class="text-[1.2em]">PizzaHouse has great pizza. Not only do you get served with a great attitude and delivered delicious pizza, you get a great price.</p>
+                        <div class="slider-img py-5">
+                            <img src="assets/img/user-7-115x115.jpg" class="rounded-[50%] lg:hidden" alt="user 9">
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-end h-[17vh]">
+                        <h6 class="text-[1.2em]">Stephanie Williams</h6>
+                    <span class="text-[#6046b6] text-[1em]">client</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide w-[30%]  text-center">
+                    <div class="slider-text bg-white">
+                        <p class="text-[1.2em]">PizzaHouse has great pizza. Not only do you get served with a great attitude and delivered delicious pizza, you get a great price.</p>
+                        <div class="slider-img py-5">
+                            <img src="assets/img/user-9-115x115.jpg" class="rounded-[50%] lg:hidden" alt="user 9">
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-end h-[17vh]">
+                        <h6 class="text-[1.2em]">Bill Johnson</h6>
+                    <span class="text-[#6046b6] text-[1em]">client</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+            </div>
+           </div>
+        </section>
+        <section id="galery" data-aos="fade" data-aos-duration="1200">
+            <div class="galery py-16 lg:flex gap-3">
+                <div class="md:flex gap-3">
+                    <div class="galery-item my-2 overflow-hidden">
+                        <div class="galery-figure w-[100%]">
+                            <img src="assets/img/gallery-1-310x585.jpg" class="w-[100%]" alt="galery1">
+                        </div>
+                        <div class="galery-bottom bg-[#F5F5F5]">
+                            <p class="text-[1em]  font-medium px-2 py-3 uppercase">Best ingredients</p>
+                            <p class="text-[.9em] font-medium px-2  pb-3 uppercase text-[#73CCA1]">Tasty pizza</p>
+                        </div>
+                    </div>
+                    <div class="galery-item my-2 overflow-hidden">
+                        <div class="galery-figure w-[100%]">
+                            <img src="assets/img/gallery-2-631x587.jpg" class="w-[100%]" alt="galery2">
+                        </div>
+                        <div class="galery-bottom bg-[#F5F5F5]">
+                            <p class="text-[1em]  font-medium px-2 py-3 uppercase">COMFORTABLE INTERIOR</p>
+                            <p class="text-[.9em] font-medium px-2 pb-3  uppercase text-[#73CCA1]">MODERN DESIGN</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="md:flex gap-3">
+                        <div class="galery-item my-2 lg:my-1 overflow-hidden">
+                            <div class="galery-figure w-[100%]">
+                                <img src="assets/img/gallery-3-311x289.jpg" class="w-[100%]" alt="galery3">
+                            </div>
+                            <div class="galery-bottom bg-[#F5F5F5] ">
+                                <p class="text-[1em]  font-medium px-2 py-3 uppercase">QUALITY DISHWARE</p>
+                                <p class="text-[.9em] font-medium px-2  pb-3 uppercase text-[#73CCA1]">TOP-NOTCH UTENSILS
+                                </p>
+                            </div>
+                        </div>
+                        <div class="galery-item my-2 lg:my-1 overflow-hidden">
+                            <div class="galery-figure w-[100%]">
+                                <img src="assets/img/gallery-4-631x289.jpg" class="w-[100%]" alt="galery4">
+                            </div>
+                            <div class="galery-bottom  bg-[#F5F5F5]">
+                                <p class="text-[1em]  font-medium px-2 py-3 uppercase">REFRESHING COCKTAILS</p>
+                                <p class="text-[.9em] font-medium px-2  pb-3 uppercase text-[#73CCA1]">EXCLUSIVE
+                                    SELECTION
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:flex gap-3">
+                        <div class="galery-item my-2 lg:my-1 overflow-hidden">
+                            <div class="galery-figure w-[100%]">
+                                <img src="assets/img/gallery-5-311x289.jpg" class="w-[100%]" alt="galery5">
+                            </div>
+                            <div class="galery-bottom bg-[#F5F5F5] ">
+                                <p class="text-[1em]  font-medium px-2 py-3 uppercase">EXOTIC SALADS</p>
+                                <p class="text-[.9em] font-medium px-2  pb-3 uppercase text-[#73CCA1]">SUMMER TASTE</p>
+                            </div>
+                        </div>
+                        <div class="galery-item my-2 lg:my-1 overflow-hidden">
+                            <div class="galery-figure w-[100%]">
+                                <img src="assets/img/gallery-6-311x289.jpg" class="w-[100%]" alt="galery6">
+                            </div>
+                            <div class="galery-bottom bg-[#F5F5F5]">
+                                <p class="text-[1em]  font-medium px-2 py-3 uppercase">ALL TYPES OF PIZZA</p>
+                                <p class="text-[.9em] font-medium px-2  pb-3 uppercase text-[#73CCA1]">SPECIAL RECIPES
+                                </p>
+                            </div>
+                        </div>
+                        <div class="galery-item my-2 lg:my-1 overflow-hidden">
+                            <div class="galery-figure w-[100%]">
+                                <img src="assets/img/gallery-7-311x289.jpg" class="w-[100%]" alt="galery7">
+                            </div>
+                            <div class="galery-bottom bg-[#F5F5F5] ">
+                                <p class="text-[1em]  font-medium px-2 py-3 uppercase">DIVERSE MENU</p>
+                                <p class="text-[.9em] font-medium px-2  pb-3 uppercase text-[#73CCA1]">PICK YOUR
+                                    FAVORITE
+                                    DISH</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section id="form-sec">
+            <div class="wrapper py-5" >
+             <div id="form" class="py-5">
+                <h3 class="text-center uppercase  text-[1.6em] py-8 font-serif font-thin lg:text-[3rem] md:text-[2em] lg:py-10 md:tracking-[.4em]" data-aos="fade-left" data-aos-duration="1200">Book your table</h3>
+                <form action="">
+                    <div class="flex flex-col md:flex-row md:flex-wrap items-center justify-center">
+                        <input class="w-[80%] p-3 m-5 border-[1px] border-[#ccc] md:w-[45%] md:m-2 md:py-4 lg:w-[30%] " type="text" name="" id="" placeholder="Your Name*" data-aos="fade-up" data-aos-duration="1000"/>
+                        <input class="w-[80%] p-3 m-5 border-[1px] border-[#ccc] md:w-[45%] md:m-2 md:py-4 lg:w-[30%] " type="email" name="" id="" placeholder="Your E-mail*" data-aos="fade-down" data-aos-duration="1000"/>
+                        <select class="w-[80%] p-3 m-5 border-[1px] border-[#ccc] text-[#333] md:w-[93%] md:mx-[5px] md:py-4 lg:w-[30%] " name="" id="" data-aos="fade-up" data-aos-duration="1000">
+                            <option value="" class="text-[#333]" >Select  a Service</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <textarea name="" id="" cols="40" rows="5" class="border-[1px] boder-[#ccc] ml-[20px] px-1 md:w-[93%] md:ml-[5px] lg:w-[92%] " placeholder="Message"></textarea>
+                    </div>
+                </form>
+              <div class="lg:flex justify-between items-center lg:mx-[48px] lg:py-[20px]">
+                <div class="text-center" data-aos="fade-up" data-aos-duration="1200">
+                    <button  class="hover:bg-[#73CCA1] hover:text-white bg-[#FFE745] text-black font-bold uppercase p-5 mt-9 lg:p-6 lg:mr-[17%] lg:w-[16vw]">send message</button>
+                </div>
+                <div class="flex items-center justify-center w-[80-%] gap-5 p-[25px]">
+                    <i class="fa-solid fa-quote-left text-[#EEE] text-[3.5em]" data-aos="fade-left" data-aos-duration="1200"></i>
+                    <p class="tracking-[.05em] text-[1.7em] font-[300]" data-aos="fade-up" data-aos-duration="1300">Please reserve your table at least 1 day in advance.</p>
+                </div>
+              </div>
+                <div class="flex justify-between w-[60%] mx-auto py-[20px] items-center lg:hidden">
+                    <div class="bg-[#f5f5f5] w-[5px] h-[40px]"></div>
+                    <div class="bg-[#f5f5f5] w-[5px] h-[60px]"></div>
+                    <svg class="h-12 w-12 text-purple-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                      </svg>
+                      <div class="bg-[#f5f5f5] w-[5px] h-[40px]"></div>
+                    <div class="bg-[#f5f5f5] w-[5px] h-[60px]"></div>
+                </div>
+                <h5 class="text-center font-light text-[1.7em] py-[30px] lg:hidden">Free Delivery</h5>
+                <p class="text-center text-[#777] text-[1.2em] mb-[20px] w-[80%] mx-auto lg:hidden">If you order more than 3 pizzas, we will gladly deliver them to you for free.</p>
+                <div class="py-[30px] flex item-center justify-center gap-[20px] lg:hidden">
+                    <div class="w-[35px] h-[5px] bg-[#FFE745]"></div>
+                    <div class="w-[35px] h-[5px] bg-[#ebebeb]"></div>
+                    <div class="w-[35px] h-[5px] bg-[#ebebeb]"></div>
+                    <div class="w-[35px] h-[5px] bg-[#ebebeb]"></div>
+                </div>
+            </div>
+            <div class="rotate-icons hidden lg:flex py-[30px] my-[30px] gap-[10px]">
+                <div class="rotate-icon" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="hidden icon-figure justify-between w-[60%] mx-auto py-[20px] items-center lg:flex">
+                            <div class="stick2 sticks bg-[#f5f5f5] w-[5px] h-[40px]"></div>
+                            <div class="stick flex gap-3">
+                                <div class="do-not-rotate">
+                                    <i class="fa-solid fa-bag-shopping  text-[#6046B6] text-[3.5rem]"></i>
+                                </div>
+                            </div>
+                            <div class="stick2 sticks bg-[#f5f5f5] w-[5px] h-[40px]"></div>
+                        </div>
+                        <div class="icon-text">
+                            <h5 class="text-center font-light text-[1.7em] py-[30px]">Free Delivery</h5>
+                            <p class="text-center text-[#777] text-[1.2em] mb-[20px] w-[80%] mx-auto">If you order more than 3 pizzas, we will gladly deliver them to you for free.</p> 
+                        </div>
+                </div>
+                <div class="rotate-icon" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="hidden icon-figure justify-between w-[60%] mx-auto py-[20px] items-center lg:flex">
+                        <div class="stick2 sticks bg-[#f5f5f5] w-[5px] h-[40px]"></div>
+                        <div class="stick flex gap-3">
+                            <div class="do-not-rotate">
+                                <i class="fa-regular fa-map text-[#6046B6] text-[3.5rem]"></i>
+                            </div>
+                        </div>
+                        <div class="stick2 sticks bg-[#f5f5f5] w-[5px] h-[40px]"></div>
+                    </div>
+                    <div class="icon-text">
+                        <h5 class="text-center font-light text-[1.7em] py-[30px] ">Convenient Location</h5>
+                        <p class="text-center text-[#777] text-[1.2em] mb-[20px] w-[80%] mx-auto">Our pizzarias is situated in the downtown and it is very easy to reach even on weekends.</p> 
+                    </div>
+                </div>
+                <div class="rotate-icon" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="hidden icon-figure justify-between w-[60%] mx-auto py-[20px] items-center lg:flex">
+                        <div class="stick2 sticks bg-[#f5f5f5] w-[5px] h-[40px]"></div>
+                        <div class="stick flex gap-3">
+                            <div class="do-not-rotate">
+                                <i class="fa-solid fa-satellite-dish text-[#6046B6] text-[3.5rem]"></i>
+                            </div>
+                        </div>
+                        <div class="stick2 sticks bg-[#f5f5f5] w-[5px] h-[40px]"></div>
+                    </div>
+                    <div class="icon-text">
+                        <h5 class="text-center font-light text-[1.7em] py-[30px] ">Free Wi-fi</h5>
+                        <p class="text-center text-[#777] text-[1.2em] mb-[20px] w-[80%] mx-auto">We have free wi-fi avialable to all clients and visitors of our pizzeria.</p> 
+                    </div>
+                </div>
+                <div class="rotate-icon" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="hidden icon-figure justify-between w-[60%] mx-auto py-[20px] items-center lg:flex">
+                        <div class="stick2 sticks bg-[#f5f5f5] w-[5px] h-[40px] mx-5"></div>
+                        <div class="stick flex">
+                            <div class="do-not-rotate">
+                                <i class="fa-regular fa-thumbs-up text-[#6046B6] text-[3.5rem]"></i>
+                            </div>
+                        </div>
+                        <div class="stick2 sticks bg-[#f5f5f5] w-[5px] h-[40px]"></div>
+                    </div>
+                    <div class="icon-text">
+                        <h5 class="text-center font-light text-[1.7em] py-[30px] ">Free Wi-fi</h5>
+                        <p class="text-center text-[#777] text-[1.2em] mb-[20px] w-[80%] mx-auto">We have free wi-fi avialable to all clients and visitors of our pizzeria.</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner h-[10vh] md:h-[20vh] lg:h-[40vh]"></div>
+        </section>
+
+    </main>
+    <footer class="bg-[#38393B] text-white text-center lg:text-start">
+        <div class="py-[20px] lg:flex justify-center items-center gap-[30px]">
+            <div class="lg:py-[30px] lg:mx-[20px]">
+                <h3 class="text-[1.5em] py-[10px] lg:text-[1.8em] lg:font-bold" data-aos="fade-left" data-aos-duration="1200">What we offer</h3>
+                <div class="lists flex justify-center gap-[10px] pb-[30px]">
+                    <ul class="flex gap-[10px] justify-center items-center flex-wrap lg:block lg:m-[20px]">
+                        <li><a href="" class="text-[#D7D7D8] text-[1em]">Pizzas</a></li>
+                        <li><a href="" class="text-[#D7D7D8] text-[1em]">Burgers</a></li>
+                        <li><a href="" class="text-[#D7D7D8] text-[1em]">salads</a></li>
+                    </ul>
+                    <ul class="flex gap-[10px] justify-center items-center flex-wrap lg:block lg:m-[20px]">
+                        <li><a href="" class="text-[#D7D7D8] text-[1.1em]">Drinks</a></li>
+                        <li><a href="" class="text-[#D7D7D8] text-[1.1em]">Seafood</a></li>
+                        <li><a href="" class="text-[#D7D7D8] text-[1.1em]">Drinks</a></li>
+                    </ul>
+            </div>
+            </div>
+            <div class="lg:mx-[20px]">
+                <h3 class="text-[1.5em] py-[10px] lg:text-[1.8em] lg:font-bold" data-aos="fade-left" data-aos-duration="1500">Information</h3>
+            <div class="lists flex justify-center gap-[10px] pb-[30px] flex-wrap">
+                <ul class="flex gap-[10px] justify-center items-center lg:block lg:m-[20px]">
+                    <li><a href="" class="text-[#D7D7D8] text-[1em]">About us</a></li>
+                    <li><a href="" class="text-[#D7D7D8] text-[1em]">Latest News</a></li>
+                    <li><a href="" class="text-[#D7D7D8] text-[1em]">Our Menu</a></li>
+                </ul>
+                <ul class="flex gap-[10px] justify-center items-center flex-wrap lg:block lg:m-[20px]">
+                    <li><a href="" class="text-[#D7D7D8] text-[1.1em]">FAQ</a></li>
+                    <li><a href="" class="text-[#D7D7D8] text-[1.1em]">Shop</a></li>
+                    <li><a href="" class="text-[#D7D7D8] text-[1.1em]">Contact us</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="lg:mx-[20px]">
+                <h3 class="text-[1.5em] py-[10px] lg:text-[1.8em] lg:font-bold lg:py-0" data-aos="fade-left" data-aos-duration="2000">Newsletter</h3>
+            <p class="text-[#D7D7D8] text-[1.2em] py-4">Sign up for the latest news and updates</p>
+            <div class="flex item-center justify-center py-[10px]">
+                <input type="text" class="bg-[#565758] p-[10px] lg:w-[25vw]" placeholder="Enter your E-mail" />
+                <div class="bg-[#FFE745] p-[10px] px-[13px]">
+                <i class="fa-solid fa-paper-plane text-black"></i>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="border-y-slate-200 border-y-[1px] text-center text-white lg:flex justify-center items-center lg:py-[30px] gap-[20px]">
+            <div class="flex justify-center py-[20px]">
+                <a href="index.htm" >
+                    <img src="assets/img/logo-inverse-198x66.png" alt="logo">
+                </a>
+            </div>
+            <div class="flex items-center justify-center gap-[15px]">
+                <img src="assets/img/like-icon-58x25.png" alt="like icon">
+                <span class="text-[1.6em]">9.4K</span>
+            </div>
+            <div class="flex gap-[10px] justify-center items-center m-[10px]">
+                <div class="bg-[#4C4D4F] p-[10px]">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <span>+1 718-999-3939</span>
+            </div>
+            <div class="flex justify-center items-center m-[10px]">
+                <div class="bg-[#4C4D4F] p-[10px]">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <span>info@demolink.org</span>
+            </div>
+            <div class="flex gap-[10px] justify-center items-center" data-aos="fade-right" data-aos-duration="1500">
+                <div class="bg-[#4C4D4F] p-[10px] m-[5px]">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="bg-[#4C4D4F] p-[10px] m-[5px]">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class="bg-[#4C4D4F] p-[10px] m-[5px]">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="bg-[#4C4D4F] p-[10px] m-[5px]">
+                    <i class="fa-brands fa-google-plus-g"></i>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="py-[20px] text-start lg:flex justify-center items-center gap-[50px]">
+            <p class="text-[#ffffff66] text-[1.2em]">514 S. Magnolia St. Orlando, FL 32806</p>
+            <p class="text-[#5C6162] text-[1.2em]">© 2024. All Rights Reserved. Design by TemplateMonster</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
