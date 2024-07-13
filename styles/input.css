@@ -239,7 +239,6 @@ html{
 .slider-text{
     position: relative;
 }
- 
   .menu-card {
     height: 0;
     overflow: hidden;
@@ -332,7 +331,7 @@ html{
         padding: 10px;
     }
     .swiper-slide{
-        height: 60vh;
+        /* height: 30vh; */
         margin-top: 100px;
     }
     .swiper-slide-active{

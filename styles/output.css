@@ -642,10 +642,6 @@ video {
   margin-bottom: 20px;
 }
 
-.ml-\[20px\] {
-  margin-left: 20px;
-}
-
 .mr-1 {
   margin-right: 0.25rem;
 }
@@ -1748,7 +1744,7 @@ html{
   }
 
   .swiper-slide{
-    height: 60vh;
+    /* height: 30vh; */
     margin-top: 100px;
   }
 

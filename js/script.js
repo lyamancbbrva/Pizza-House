@@ -30,9 +30,9 @@ let swiper = new Swiper(".mySwiper", {
    slidesPerView: 3,
    spaceBetween: 30,
    loop: true,
-   autoplay:{
-        delay: 3000
-   },
+  //  autoplay:{
+  //       delay: 3000
+  //  },
    centeredSlides: true,
    navigation: {
      nextEl: ".swiper-button-next",
