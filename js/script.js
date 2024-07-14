@@ -2,7 +2,7 @@ AOS.init(
  {once:true}
 );
 
-let swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".slider1.mySwiper", {
   spaceBetween: 30,
   autoplay: {
     delay: 3000
@@ -30,9 +30,9 @@ let swiper = new Swiper(".mySwiper", {
    slidesPerView: 3,
    spaceBetween: 30,
    loop: true,
-  //  autoplay:{
-  //       delay: 3000
-  //  },
+   autoplay:{
+        delay: 3000
+   },
    centeredSlides: true,
    navigation: {
      nextEl: ".swiper-button-next",
@@ -41,7 +41,7 @@ let swiper = new Swiper(".mySwiper", {
    breakpoints: {
      768: {
        slidesPerView: 3,
-       centeredSlides: false,
+       centeredSlides: true,
      },
      320: {
        slidesPerView: 1,
