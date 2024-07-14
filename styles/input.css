@@ -283,7 +283,7 @@ html{
        font-size: 1.6em;
     }
     .slider-img img{
-        left: 75%;
+        left: 37% !important;
     }
     .slider1 .fa-arrow-left::after, .slider1 .fa-arrow-right::after{
         display: inline-block;
